@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2019/06/07/hello-world/</loc>
+    <loc>http://yeening.top/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/</loc>
     
-    <lastmod>2019-06-07T04:41:15.454Z</lastmod>
+    <lastmod>2019-06-08T09:06:46.945Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/</loc>
+    <loc>http://yeening.top/tags/index.html</loc>
     
-    <lastmod>2019-06-07T04:32:05.688Z</lastmod>
+    <lastmod>2019-06-08T08:55:39.693Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yeening.top/categories/index.html</loc>
+    
+    <lastmod>2019-06-08T08:38:54.445Z</lastmod>
     
   </url>
   
