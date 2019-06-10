@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yeening.top/"/>
-  <updated>2019-06-08T09:06:46.945Z</updated>
+  <updated>2019-06-10T15:08:18.847Z</updated>
   <id>http://yeening.top/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="http://yeening.top/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/"/>
     <id>http://yeening.top/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/</id>
     <published>2019-06-07T04:32:05.000Z</published>
-    <updated>2019-06-08T09:06:46.945Z</updated>
+    <updated>2019-06-10T15:08:18.847Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="*Why Blog?"></a>*Why Blog?</h2><p>Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages.  </p><p>Because: </p><blockquote><ol><li><p>You can know many like-minded people with you when you read and discuss each other’s blogs.</p></li><li><p>Writing is for better thinking.</p></li><li><p>Teaching is the best way of leaning. If you cannot make a clear statement, you probably don’t fully understand it.</p><p>— <a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" target="_blank" rel="noopener">WeiPeng’s Blog</a></p></li></ol></blockquote><h2 id="Create-a-repository-on-github"><a href="#Create-a-repository-on-github" class="headerlink" title="Create a repository on github"></a>Create a repository on github</h2><h2 id="Build-your-environment"><a href="#Build-your-environment" class="headerlink" title="Build your environment"></a>Build your environment</h2><h3 id="Install-git"><a href="#Install-git" class="headerlink" title="Install git"></a>Install git</h3><h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><h2 id="Initialize-the-blog"><a href="#Initialize-the-blog" class="headerlink" title="Initialize the blog"></a>Initialize the blog</h2><h2 id="Choose-a-theme"><a href="#Choose-a-theme" class="headerlink" title="Choose a theme"></a>Choose a theme</h2><h2 id="Deploy-the-blog"><a href="#Deploy-the-blog" class="headerlink" title="Deploy the blog"></a>Deploy the blog</h2>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Why-Blog&quot;&gt;&lt;a href=&quot;#Why-Blog&quot; class=&quot;headerlink&quot; title=&quot;*Why Blog?&quot;&gt;&lt;/a&gt;*Why Blog?&lt;/h2&gt;&lt;p&gt;Simply speaking, recording your valuable t
+      
     
     </summary>
     
@@ -32,7 +39,9 @@
     
       <category term="Blog" scheme="http://yeening.top/tags/Blog/"/>
     
-      <category term="IT LS" scheme="http://yeening.top/tags/IT-LS/"/>
+      <category term="Life" scheme="http://yeening.top/tags/Life/"/>
+    
+      <category term="Technology" scheme="http://yeening.top/tags/Technology/"/>
     
   </entry>
   

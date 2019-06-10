@@ -8,7 +8,7 @@
       <link href="/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/"/>
       <url>/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="*Why Blog?"></a>*Why Blog?</h2><p>Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages.  </p><p>Because: </p><blockquote><ol><li><p>You can know many like-minded people with you when you read and discuss each other’s blogs.</p></li><li><p>Writing is for better thinking.</p></li><li><p>Teaching is the best way of leaning. If you cannot make a clear statement, you probably don’t fully understand it.</p><p>— <a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" target="_blank" rel="noopener">WeiPeng’s Blog</a></p></li></ol></blockquote><h2 id="Create-a-repository-on-github"><a href="#Create-a-repository-on-github" class="headerlink" title="Create a repository on github"></a>Create a repository on github</h2><h2 id="Build-your-environment"><a href="#Build-your-environment" class="headerlink" title="Build your environment"></a>Build your environment</h2><h3 id="Install-git"><a href="#Install-git" class="headerlink" title="Install git"></a>Install git</h3><h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><h2 id="Initialize-the-blog"><a href="#Initialize-the-blog" class="headerlink" title="Initialize the blog"></a>Initialize the blog</h2><h2 id="Choose-a-theme"><a href="#Choose-a-theme" class="headerlink" title="Choose a theme"></a>Choose a theme</h2><h2 id="Deploy-the-blog"><a href="#Deploy-the-blog" class="headerlink" title="Deploy the blog"></a>Deploy the blog</h2>]]></content>
       
       
       <categories>
@@ -22,7 +22,9 @@
             
             <tag> Blog </tag>
             
-            <tag> IT LS </tag>
+            <tag> Life </tag>
+            
+            <tag> Technology </tag>
             
         </tags>
       

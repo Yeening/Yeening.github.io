@@ -44,7 +44,7 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
 <link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
@@ -96,15 +96,18 @@
 
 
 
-  <meta name="keywords" content="Blog,IT LS">
+  <meta name="description" content="*Why Blog?Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages.   Because:    You can know many like-minded people with you wh">
+<meta name="keywords" content="Blog,Life,Technology">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to build a blog with github page and hexo">
 <meta property="og:url" content="http://yeening.top/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/index.html">
 <meta property="og:site_name" content="Yeening&#39;s Blog">
+<meta property="og:description" content="*Why Blog?Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages.   Because:    You can know many like-minded people with you wh">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-08T09:06:46.945Z">
+<meta property="og:updated_time" content="2019-06-10T15:08:18.847Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to build a blog with github page and hexo">
+<meta name="twitter:description" content="*Why Blog?Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages.   Because:    You can know many like-minded people with you wh">
 
 
 
@@ -171,8 +174,10 @@
   
     
   
+
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
+
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
@@ -398,7 +403,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-08 17:06:46" itemprop="dateModified" datetime="2019-06-08T17:06:46+08:00">2019-06-08</time>
+                <time title="Modified: 2019-06-10 23:08:18" itemprop="dateModified" datetime="2019-06-10T23:08:18+08:00">2019-06-10</time>
               
             
           </span>
@@ -450,7 +455,20 @@
       
 
       
-        
+        <h2 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="*Why Blog?"></a>*Why Blog?</h2><p>Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages.  </p>
+<p>Because: </p>
+<blockquote>
+<ol>
+<li><p>You can know many like-minded people with you when you read and discuss each other’s blogs.</p>
+</li>
+<li><p>Writing is for better thinking.</p>
+</li>
+<li><p>Teaching is the best way of leaning. If you cannot make a clear statement, you probably don’t fully understand it.</p>
+<p>— <a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" target="_blank" rel="noopener">WeiPeng’s Blog</a></p>
+</li>
+</ol>
+</blockquote>
+<h2 id="Create-a-repository-on-github"><a href="#Create-a-repository-on-github" class="headerlink" title="Create a repository on github"></a>Create a repository on github</h2><h2 id="Build-your-environment"><a href="#Build-your-environment" class="headerlink" title="Build your environment"></a>Build your environment</h2><h3 id="Install-git"><a href="#Install-git" class="headerlink" title="Install git"></a>Install git</h3><h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><h2 id="Initialize-the-blog"><a href="#Initialize-the-blog" class="headerlink" title="Initialize the blog"></a>Initialize the blog</h2><h2 id="Choose-a-theme"><a href="#Choose-a-theme" class="headerlink" title="Choose a theme"></a>Choose a theme</h2><h2 id="Deploy-the-blog"><a href="#Deploy-the-blog" class="headerlink" title="Deploy the blog"></a>Deploy the blog</h2>
       
     </div>
 
@@ -478,7 +496,9 @@
           
             <a href="/tags/Blog/" rel="tag"># Blog</a>
           
-            <a href="/tags/IT-LS/" rel="tag"># IT LS</a>
+            <a href="/tags/Life/" rel="tag"># Life</a>
+          
+            <a href="/tags/Technology/" rel="tag"># Technology</a>
           
         </div>
       
@@ -527,8 +547,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -585,7 +614,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -645,6 +676,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-Blog"><span class="nav-number">1.</span> <span class="nav-text">*Why Blog?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-a-repository-on-github"><span class="nav-number">2.</span> <span class="nav-text">Create a repository on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-your-environment"><span class="nav-number">3.</span> <span class="nav-text">Build your environment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-git"><span class="nav-number">3.1.</span> <span class="nav-text">Install git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Node-js"><span class="nav-number">3.2.</span> <span class="nav-text">Install Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Hexo"><span class="nav-number">3.3.</span> <span class="nav-text">Install Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialize-the-blog"><span class="nav-number">4.</span> <span class="nav-text">Initialize the blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Choose-a-theme"><span class="nav-number">5.</span> <span class="nav-text">Choose a theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deploy-the-blog"><span class="nav-number">6.</span> <span class="nav-text">Deploy the blog</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
