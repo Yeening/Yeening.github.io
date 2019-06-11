@@ -85,3 +85,11 @@ deploy:
   type: git
   repo: git@github.com:Yeening/Yeening.github.io.git
   branch: master
+
+
+# Local Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000

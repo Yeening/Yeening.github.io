@@ -1,36 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>How to build a blog with github page and hexo</title>
-      <link href="/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/"/>
-      <url>/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog?"></a>Why Blog?</h2><p>Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages.  </p><p>Because: </p><blockquote><ol><li><p>You can know many like-minded people with you when you read and discuss each other’s blogs.</p></li><li><p>Writing is for better thinking.</p></li><li><p>Teaching is the best way of leaning. If you cannot make a clear statement, you probably don’t fully understand it.</p><p>— <a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" target="_blank" rel="noopener">WeiPeng’s Blog</a></p></li></ol></blockquote><h2 id="Create-a-repository-on-github"><a href="#Create-a-repository-on-github" class="headerlink" title="Create a repository on github"></a>Create a repository on github</h2><p>Create a repository on your <a href="https://github.com/" target="_blank" rel="noopener">github</a>, caution: you must create a repository named:    </p><p>​            <strong><em>YourUserName.github.io</em></strong></p><p><em>If you don’t know how to create a repository, follow this: <a href="https://help.github.com/en/articles/create-a-repo" target="_blank" rel="noopener">Create a repo</a></em>.</p><h2 id="Build-your-environment"><a href="#Build-your-environment" class="headerlink" title="Build your environment"></a>Build your environment</h2><p>I will introduce the steps on windows, if you are using a Mac, you can see this: <a href="https://commitlogs.com/2016/09/03/how-to-build-blog-with-hexo/" target="_blank" rel="noopener">How To Build A Blog With Hexo</a>.</p><h3 id="Install-git"><a href="#Install-git" class="headerlink" title="Install git"></a>Install git</h3><ul><li><p>Download the suitable version Git for Windows Setup with your computer from the official site: <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git - Downloading Package</a>.</p></li><li><p>Install Git.</p></li><li><p>Test the Git installation with <code>git</code> command in cmd.</p></li><li><p>Link your Git with your github account:</p><ul><li><p>open cmd with as an administrator</p></li><li><p>set the user.name and user.email</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name YourGithubUserName</span><br><span class="line">git config --global user.email YourGithubEmail</span><br></pre></td></tr></table></figure></li><li><p>generate the ssh key file</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C YourGithubEmail</span><br></pre></td></tr></table></figure><p>press the Enter for three times</p></li><li><p>find the generated id_rsa.pub file, copy the whole content</p></li><li><p>Open <a href="https://github.com/settings/keys" target="_blank" rel="noopener">GitHub_Settings_keys</a>, choose New SSH key, paste the key in the Key blank, fill in the Title blank with anything, choose Add SSH key.</p></li><li><p>test the linage in cmd</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure><p>If you see the welcome message, eg:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi XXX! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line">Connection to github.com closed.</span><br></pre></td></tr></table></figure><p>Congratulations!</p></li></ul></li><li><p>You have successfully set your Git, you can manage your github repositories with Git on your computer.</p></li></ul><h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><h2 id="Initialize-the-blog"><a href="#Initialize-the-blog" class="headerlink" title="Initialize the blog"></a>Initialize the blog</h2><h2 id="Choose-a-theme"><a href="#Choose-a-theme" class="headerlink" title="Choose a theme"></a>Choose a theme</h2><h2 id="Deploy-the-blog"><a href="#Deploy-the-blog" class="headerlink" title="Deploy the blog"></a>Deploy the blog</h2>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[How to build a blog with github page and hexo]]></title>
+    <url>%2F2019%2F06%2F07%2FHow-to-build-your-personal-blog-with-github-page-and-hexo%2F</url>
+    <content type="text"><![CDATA[Why Blog?Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages. Because: You can know many like-minded people with you when you read and discuss each other’s blogs. Writing is for better thinking. Teaching is the best way of leaning. If you cannot make a clear statement, you probably don’t fully understand it. — WeiPeng’s Blog Create a repository on githubCreate a repository on your github, caution: you must create a repository named: ​ YourUserName.github.io If you don’t know how to create a repository, follow this: Create a repo. Build your environmentI will introduce the steps on windows, if you are using a Mac, you can see this: How To Build A Blog With Hexo. Install git Download the suitable version Git for Windows Setup with your computer from the official site: Git - Downloading Package. Install Git. Test the Git installation with git command in cmd. Link your Git with your github account: open cmd with as an administrator set the user.name and user.email 12git config --global user.name YourGithubUserNamegit config --global user.email YourGithubEmail generate the ssh key file 1ssh-keygen -t rsa -C YourGithubEmail press the Enter for three times find the generated id_rsa.pub file, copy the whole content Open GitHub_Settings_keys, choose New SSH key, paste the key in the Key blank, fill in the Title blank with anything, choose Add SSH key. test the linage in cmd 1ssh git@github.com If you see the welcome message, eg: 12Hi XXX! You&apos;ve successfully authenticated, but GitHub does not provide shell access.Connection to github.com closed. Congratulations! You have successfully set your Git, you can manage your github repositories with Git on your computer. Install Node.jsInstall HexoInitialize the blogChoose a themeDeploy the blog]]></content>
       <categories>
-          
-          <category> engineer </category>
-          
+        <category>engineer</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Blog </tag>
-            
-            <tag> Life </tag>
-            
-            <tag> Technology </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>Blog</tag>
+        <tag>Life</tag>
+        <tag>Technology</tag>
+      </tags>
+  </entry>
 </search>
