@@ -49,14 +49,14 @@ I will introduce the steps on windows, if you are using a Mac, you can see this:
   * set the user.name and user.email
 
     ```
-    git config --global user.name YourGithubUserName
-    git config --global user.email YourGithubEmail
+    $ git config --global user.name YourGithubUserName
+    $ git config --global user.email YourGithubEmail
     ```
 
   * generate the ssh key file
 
     ```
-    ssh-keygen -t rsa -C YourGithubEmail
+    $ ssh-keygen -t rsa -C YourGithubEmail
     ```
 
     press the Enter for three times
@@ -68,7 +68,7 @@ I will introduce the steps on windows, if you are using a Mac, you can see this:
   * test the linage in cmd
 
     ```
-    ssh git@github.com
+    $ ssh git@github.com
     ```
 
     If you see the welcome message, eg:
@@ -90,7 +90,42 @@ I will introduce the steps on windows, if you are using a Mac, you can see this:
 
 ### Install Hexo
 
+[Hexo](<https://github.com/hexojs/hexo>) is:
+
+> A fast, simple & powerful blog framework, powered by [Node.js](https://nodejs.org/). 
+
+We can easily  create and manage our blog with hexo.
+
+* Make a folder (eg. MyBlog), cd to it in cmd
+
+* Install hexo with npm
+
+  ```
+  $ npm install hexo-cli -g
+  ```
+
 ## Initialize the blog
+
+- Set up your blog
+
+  ```
+  $ hexo init blog
+  $ cd blog
+  ```
+
+- Generate static files
+
+  ```
+  $ hexo g
+  ```
+
+- Start the server (run the blog with local server, usually for test)
+
+  ```
+  $ hexo s
+  ```
+
+- Visit localhost:4000 (the ip address shown in the return message in cmd), we can see the initial form of a hexo bolg.
 
 ## Choose a theme
 
