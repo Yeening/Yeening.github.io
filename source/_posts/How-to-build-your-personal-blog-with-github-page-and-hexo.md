@@ -84,6 +84,10 @@ I will introduce the steps on windows, if you are using a Mac, you can see this:
 
 ### Install Node.js
 
+* Download Node.js at the offical website: [Download | Node.js](<https://nodejs.org/en/download/>)
+* After installation, use `node -v` in cmd to check node.js.
+* use `npm -v` in cmd to check npm (installed with node.js)
+
 ### Install Hexo
 
 ## Initialize the blog
