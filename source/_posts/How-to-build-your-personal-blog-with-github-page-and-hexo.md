@@ -127,9 +127,11 @@ We can easily  create and manage our blog with hexo.
 
 - Visit localhost:4000 (the ip address shown in the return message in cmd), we can see the initial form of a hexo bolg.
 
-## Choose a theme
-
 ## Deploy the blog
 
+We are now running the blog at local server, in the next step, we are going to deploy it to github, so that your blog can be visited anywhere with Internet access.
 
+Firstly, we need to know about the site configuration file: `_config.yml`, we can config the characteristics of our blog by modifying this file.
+
+## Choose a theme
 
