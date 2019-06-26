@@ -49,14 +49,14 @@ I will introduce the steps on windows, if you are using a Mac, you can see this:
   * set the user.name and user.email
 
     ```
-    $ git config --global user.name YourGithubUserName
-    $ git config --global user.email YourGithubEmail
+    git config --global user.name YourGithubUserName
+    git config --global user.email YourGithubEmail
     ```
 
   * generate the ssh key file
 
     ```
-    $ ssh-keygen -t rsa -C YourGithubEmail
+    ssh-keygen -t rsa -C YourGithubEmail
     ```
 
     press the Enter for three times
@@ -68,7 +68,7 @@ I will introduce the steps on windows, if you are using a Mac, you can see this:
   * test the linage in cmd
 
     ```
-    $ ssh git@github.com
+    ssh git@github.com
     ```
 
     If you see the welcome message, eg:
@@ -101,7 +101,7 @@ We can easily  create and manage our blog with hexo.
 * Install hexo with npm
 
   ```
-  $ npm install hexo-cli -g
+  npm install hexo-cli -g
   ```
 
 ## Initialize the blog
@@ -109,20 +109,20 @@ We can easily  create and manage our blog with hexo.
 - Set up your blog
 
   ```
-  $ hexo init blog
-  $ cd blog
+  hexo init blog
+  cd blog
   ```
 
 - Generate static files
 
   ```
-  $ hexo g
+  hexo g
   ```
 
 - Start the server (run the blog with local server, usually for test)
 
   ```
-  $ hexo s
+  hexo s
   ```
 
 - Visit localhost:4000 (the ip address shown in the return message in cmd), we can see the initial form of a hexo bolg.
@@ -131,7 +131,51 @@ We can easily  create and manage our blog with hexo.
 
 We are now running the blog at local server, in the next step, we are going to deploy it to github, so that your blog can be visited anywhere with Internet access.
 
-Firstly, we need to know about the site configuration file: `_config.yml`, we can config the characteristics of our blog by modifying this file.
+Firstly, we need to know about the site configuration file: `_config.yml` (under the root folder of blog),  we can config the characteristics of our blog by modifying this file.
+
+* Open site configuration file, find 'deploy', modify the deploy block to:
+
+  ```
+  deploy:
+  	type: git
+  	repo: https://github.com/YourUserName/YourUserName.github.io.git
+  	branch: master
+  ```
+
+* Save site configuration file.
+
+* Install Git-deployer plugin:
+
+  ```
+  npm install hexo-deployer-git --save
+  ```
+
+* Clean, generate and deploy the blog
+
+  Remind the following commands, you need to use them (or replace `hexo d` with `hexo s` for local test) every time you make changes to your blog:
+
+  ```
+  hexo clean
+  hexo g
+  hexo d
+  ```
+
+  > `hexo d` is the deploy command in hexo
+
+* If everything goes correctly, you can now access your blog on Internet at: ***YourUserName.github.io***
 
 ## Choose a theme
 
+There are hundreds of themes for hexo, you can access them at: https://hexo.io/themes/.
+
+**Next** is a popular blog theme because its simply yet elegant UI, I will take this theme as example.
+
+* Open the Command Prompt at the root folder of blog (which includes /source and /theme, etc.)
+
+* Clone the theme:
+
+  ```
+  git clone https://github.com/theme-next/hexo-theme-next themes/next
+  ```
+
+* 
