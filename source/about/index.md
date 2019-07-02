@@ -1,5 +1,5 @@
 ---
-title: about yining (yeening)
+title: About Yining (Yeening)
 date: 2019-06-09 23:18:05
 ---
 
