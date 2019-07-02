@@ -28,7 +28,7 @@ Create a repository on your [github](<https://github.com/>), caution: you must c
 
 ​			***YourUserName.github.io***
 
-*If you don't know how to create a repository, follow this: [Create a repo](https://help.github.com/en/articles/create-a-repo)*.
+> *If you don't know how to create a repository, follow this: [Create a repo](https://help.github.com/en/articles/create-a-repo)*.
 
 ## Build your environment
 
@@ -160,7 +160,7 @@ Firstly, we need to know about the site configuration file: `_config.yml` (under
   hexo d
   ```
 
-  > `hexo d` is the deploy command in hexo
+  > *`hexo d` is the deploy command in hexo*
 
 * If everything goes correctly, you can now access your blog on Internet at: ***YourUserName.github.io***
 
@@ -170,12 +170,54 @@ There are hundreds of themes for hexo, you can access them at: https://hexo.io/t
 
 **Next** is a popular blog theme because its simply yet elegant UI, I will take this theme as example.
 
-* Open the Command Prompt at the root folder of blog (which includes /source and /theme, etc.)
+* Open the Command Prompt at the root folder of blog (the folder which includes /source and /theme, etc.)
 
-* Clone the theme:
+* Clone the theme to the folder: /themes/**themename**:
 
   ```
   git clone https://github.com/theme-next/hexo-theme-next themes/next
   ```
 
-* 
+* Open the site configuration file: `_config.yml`,change the value of theme to next (the name of theme)
+
+  ```
+  theme: next
+  ```
+
+* Clean, generate and deploy the blog
+
+  ```
+  hexo clean
+  hexo g
+  hexo d
+  ```
+
+> *For more settings with the theme next, refer to its repository: https://github.com/theme-next/hexo-theme-next , or its documentation: <https://theme-next.org/docs/>, if you are a beginner, it's good to start with next because of its detailed users' guide*
+
+## Write a post
+
+* You can create a new post with this command:
+
+  ```
+  hexo new "My post title"
+  ```
+
+  or:
+
+  ```
+  hexo n "My post title"
+  ```
+
+* Hexo will generate a markdown file named: *My post title.md*  under path: /source/_posts, you can easily write and edit your post by editing this file.
+
+  > *If you don't know what is or how to write markdown, you can learn from here: https://www.markdownguide.org/getting-started*
+
+  
+
+* You can create a new page with this command:
+
+  ```
+  hexo new page "About"
+  ```
+
+  
