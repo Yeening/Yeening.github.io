@@ -1,5 +1,5 @@
 ---
-title: How to build a blog with github page and hexo
+title: How to build a blog/personal site with github and hexo
 date: 2019-06-07 12:32:05
 categories: engineer
 tags: 

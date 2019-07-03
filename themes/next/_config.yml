@@ -605,8 +605,8 @@ calendar:
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: Yeening_Liu
   count: true
   lazyload: false
 
@@ -755,7 +755,7 @@ needmoreshare2:
 #growingio_analytics: #your projectId
 
 # Google Analytics
-#google_analytics:
+#google_analytics: UA-143294501-1
 #  tracking_id:
 #  localhost_ignored: true
 
