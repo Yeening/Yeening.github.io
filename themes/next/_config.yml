@@ -755,9 +755,9 @@ needmoreshare2:
 #growingio_analytics: #your projectId
 
 # Google Analytics
-#google_analytics: UA-143294501-1
-#  tracking_id:
-#  localhost_ignored: true
+google_analytics:
+  tracking_id: UA-143294501-1
+  localhost_ignored: true
 
 # CNZZ count
 #cnzz_siteid:
@@ -827,7 +827,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: user
   total_views: true
