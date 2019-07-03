@@ -220,4 +220,25 @@ There are hundreds of themes for hexo, you can access them at: https://hexo.io/t
   hexo new page "About"
   ```
 
-  
+
+## Bind a domain name (Optional)
+
+It is okey to leave your blog adress as *YourUserName.github.io*, and it's cool to own your personalized domain name, if you want to bind your blog with your own domain name, follow the following steps:
+
+### Get a domain name
+
+Personally, I buy my domain name at [ALi Cloud](alibabacloud.com), but it's up to you.
+
+### Set up the domain name
+
+The steps of setting a domain name varies with your domain name and its provider, so I will skip the detail, you can follow the official guide from github: https://help.github.com/en/articles/quick-start-setting-up-a-custom-domain
+
+### Create a CNAME file
+
+Create a file named `CNMAE` under folder /source, type in your domain name, you can type in your domain name without www, so that your site can be visited via a domain name either include www or not.
+
+## Sync hexo blogs among different computers (From Xiaoyu Liu)
+
+I found a good way to sync your blog among different computers on [Here](https://xiaoyuliu.github.io/2018/03/28/how-to-sync-hexo-blog/) :
+
+> Thanks to Xiaoyu Liu!
