@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yeening.top/"/>
-  <updated>2019-07-03T14:50:08.559Z</updated>
+  <updated>2019-07-11T02:54:08.324Z</updated>
   <id>http://yeening.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开始学嘻哈——嘻哈笔记1</title>
+    <link href="http://yeening.top/2019/07/11/%E5%98%BB%E5%93%88%E7%AC%94%E8%AE%B01/"/>
+    <id>http://yeening.top/2019/07/11/嘻哈笔记1/</id>
+    <published>2019-07-11T02:52:04.000Z</published>
+    <updated>2019-07-11T02:54:08.324Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天学习了道野的<a href="https://www.bilibili.com/video/av54377915" target="_blank" rel="noopener">9分钟快速说唱教学</a>，为了防止熊瞎子掰苞米，所以将视频的内容整理为文字版，供自己复习</p><h2 id="八拍"><a href="#八拍" class="headerlink" title="八拍"></a>八拍</h2><ul><li>BPM：每分钟节拍数的单位，中文名为拍子数，不同的伴奏有不同的拍子数，拍子数越多，伴奏越快</li></ul><h2 id="基本Flow"><a href="#基本Flow" class="headerlink" title="基本Flow"></a>基本Flow</h2><ul><li><p>白开水flow：每半拍一个字 </p><p>xx/xx/ (均匀)</p><p>（代表：3BangZ “交出你的微信或者交出你的性命……”）</p></li><li><p>二连音</p><ul><li>停顿二连音： (xx/  /xx/  /xx/  /xx/) *n</li><li>普通二连音：一拍吐两个字，半拍吐一个字 = 白开水flow</li><li>快二连音：一个半拍两个字</li></ul></li><li><p>三连音</p><ul><li>慢三连音：在一拍里均匀吐出三个字： xxx/xxx/xxx</li><li>快三连音：在半拍里吐出三个字：xxx xxx/xxx xxx</li></ul></li></ul><h2 id="字数调整、停顿、字音拖长"><a href="#字数调整、停顿、字音拖长" class="headerlink" title="字数调整、停顿、字音拖长"></a>字数调整、停顿、字音拖长</h2><p>字数填不满拍子怎么办？两个方法：</p><ul><li><p>停顿</p><p>可以空着，也可以配合Ad-libs (啥是Ad-libs？就是yeah, ay, uh, brrr 这些)</p></li><li><p>字音拖长</p><p>xx~xxxxx</p></li><li><p>字多了怎么办？</p><ul><li>用更快的flow</li><li>分两句唱</li><li>删了hh</li></ul></li></ul><h2 id="如何把Flow写得多变"><a href="#如何把Flow写得多变" class="headerlink" title="如何把Flow写得多变"></a>如何把Flow写得多变</h2><ul><li>把一句分成两个或者几个部分，每个部分用不一样的Flow</li><li>句子不被八拍框死，不让所有句子结束的点总在第四拍或者第八拍上</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天学习了道野的&lt;a href=&quot;https://www.bilibili.com/video/av54377915&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;9分钟快速说唱教学&lt;/a&gt;，为了防止熊瞎子掰苞米，所以将视频的内容整理为文字版，供自己复习&lt;
+      
+    
+    </summary>
+    
+      <category term="music" scheme="http://yeening.top/categories/music/"/>
+    
+    
+      <category term="Life" scheme="http://yeening.top/tags/Life/"/>
+    
+      <category term="Music" scheme="http://yeening.top/tags/Music/"/>
+    
+      <category term="Hip-hop" scheme="http://yeening.top/tags/Hip-hop/"/>
+    
+  </entry>
   
   <entry>
     <title>How to build a blog/personal site with github and hexo</title>
@@ -37,9 +66,9 @@
       <category term="engineer" scheme="http://yeening.top/categories/engineer/"/>
     
     
-      <category term="Blog" scheme="http://yeening.top/tags/Blog/"/>
-    
       <category term="Life" scheme="http://yeening.top/tags/Life/"/>
+    
+      <category term="Blog" scheme="http://yeening.top/tags/Blog/"/>
     
       <category term="Technology" scheme="http://yeening.top/tags/Technology/"/>
     
