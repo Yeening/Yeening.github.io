@@ -8,6 +8,9 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    {% if theme.sidebar.onmobile %}
+      <div id="sidebar-dimmer"></div>
+    {% endif %}
     <div class="sidebar-inner">
 
       {% set display_toc = is_post and theme.toc.enable or is_page and theme.toc.enable %}
@@ -23,16 +26,18 @@
         </ul>
       {% endif %}
 
-      <div class="site-overview-wrap sidebar-panel{% if not display_toc or toc(page.content).length <= 1 %} sidebar-panel-active{% endif %}">
+      <section class="site-overview-wrap sidebar-panel{% if not display_toc or toc(page.content).length <= 1 %} sidebar-panel-active{% endif %}">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             {% if theme.avatar.url %}
               <img class="site-author-image" itemprop="image"
                 src="{{ url_for( theme.avatar.url | default(theme.images + '/avatar.gif') ) }}"
-                alt="{{ author }}"/>
+                alt="{{ author }}" />
             {% endif %}
               <p class="site-author-name" itemprop="name">{{ author }}</p>
-              <div class="site-description motion-element" itemprop="description">{{ description }}</div>
+              <p class="site-description motion-element" itemprop="description">{#
+              #}{{ description }}{#
+            #}</p>
           </div>
 
           {% if theme.site_state %}
@@ -54,13 +59,7 @@
                 {% set categoriesPageQuery = site.pages.find({type: 'categories'}, {lean: true}) %}
                 {% set hasCategoriesPage = categoriesPageQuery.length > 0 %}
                 <div class="site-state-item site-state-categories">
-                  {% if hasCategoriesPage %}
-                    {% if theme.menu.categories %}
-                      <a href="{{ url_for(theme.menu.categories).split('||')[0] | trim }}">
-                    {% else %}
-                      <a href="{{ url_for(config.category_dir) + '/' }}">
-                    {% endif %}
-                  {% endif %}
+                  {% if hasCategoriesPage %}<a href="{{ url_for(categoriesPageQuery[0].path) }}">{% endif %}
                     {% set visibleCategories = 0 %}
                     {% for cat in site.categories %}
                       {% if cat.length %}{% set visibleCategories += 1 %}{% endif %}
@@ -75,13 +74,7 @@
                 {% set tagsPageQuery = site.pages.find({type: 'tags'}, {lean: true}) %}
                 {% set hasTagsPage = tagsPageQuery.length > 0 %}
                 <div class="site-state-item site-state-tags">
-                  {% if hasTagsPage %}
-                    {% if theme.menu.tags %}
-                      <a href="{{ url_for(theme.menu.tags).split('||')[0] | trim }}">
-                    {% else %}
-                      <a href="{{ url_for(config.tag_dir) + '/' }}">
-                    {% endif %}
-                  {% endif %}
+                  {% if hasTagsPage %}<a href="{{ url_for(tagsPageQuery[0].path) }}">{% endif %}
                     {% set visibleTags = 0 %}
                     {% for tag in site.tags %}
                       {% if tag.length %}{% set visibleTags += 1 %}{% endif %}
@@ -103,20 +96,6 @@
             </div>
           {% endif %}
 
-          {% if theme.chat.enable and theme.chat.service !== '' %}
-            <div class="chat motion-element">
-              {% if theme.chat.service == 'chatra' and theme.chatra.enable %}
-                <a onclick="Chatra('openChat', true)">
-              {% endif %}
-              {% if theme.chat.service == 'tidio' and theme.tidio.enable %}
-                <a onclick="tidioChatApi.open();">
-              {% endif %}
-              {% if theme.chat.icon %}<i class="fa fa-{{ theme.chat.icon }}"></i>{% endif %}
-                  {{ theme.chat.text }}
-                </a>
-            </div>
-          {% endif %}
-
           {% if theme.social %}
             <div class="links-of-author motion-element">
               {% for name, link in theme.social %}
@@ -125,7 +104,7 @@
                   {% if not (theme.social_icons.enable) or (not theme.social_icons.icons_only) %}
                     {% set sidebarText = name %}
                   {% endif %}
-                  {% if theme.social_icons.enable %}
+                  {%  if theme.social_icons.enable %}
                     {% set sidebarIcon = '<i class="fa fa-fw fa-' + link.split('||')[1] | trim | default('globe') + '"></i>' %}
                   {% endif %}
                   {{ next_url(sidebarURL, sidebarIcon + sidebarText, {title: name + ' &rarr; ' + sidebarURL}) }}
@@ -136,14 +115,13 @@
 
           {% if theme.creative_commons.license and theme.creative_commons.sidebar %}
              <div class="cc-license motion-element" itemprop="license">
-              {% set ccLanguage = theme.creative_commons.language %}
               {% if theme.creative_commons.license === 'zero' %}
-                {% set ccType = 'publicdomain/zero/1.0/' + ccLanguage %}
+                {% set ccType = 'publicdomain/zero/1.0/' %}
               {% else %}
-                {% set ccType = 'licenses/' + theme.creative_commons.license + '/4.0/' + ccLanguage %}
+                {% set ccType = 'licenses/' + theme.creative_commons.license + '/4.0/' %}
               {% endif %}
               {% set ccURL = 'https://creativecommons.org/' + ccType %}
-              {% set ccImage = '<img src="' + url_for(theme.images + '/cc-' + theme.creative_commons.license + '.svg') + '" alt="Creative Commons"/>' %}
+              {% set ccImage = '<img src="' + url_for(theme.images) + '/cc-' + theme.creative_commons.license + '.svg" alt="Creative Commons" />' %}
               {{ next_url(ccURL, ccImage, {class: 'cc-opacity'}) }}
              </div>
           {% endif %}
@@ -172,19 +150,18 @@
           {% endif %}
           {% include custom_sidebar %}
         </div>
-      </div>
+      </section>
 
       {% if display_toc and toc(page.content).length > 1 %}
       <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
-            {% set next_toc_number = theme.toc.number %}
-            {% if page.toc_number !== undefined %}
-              {% set next_toc_number = page.toc_number %}
+            {% if page.toc_number === undefined %}
+              {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
+            {% else %}
+              {% set toc = toc(page.content, { "class": "nav", list_number: page.toc_number }) %}
             {% endif %}
-            {% set next_toc_max_depth = page.toc_max_depth|default(theme.toc.max_depth)|default(6) %}
-            {% set toc = toc(page.content, { "class": "nav", list_number: next_toc_number, max_depth: next_toc_max_depth }) %}
 
             {% if toc.length <= 1 %}
               <p class="post-toc-empty">{{ __('post.toc_empty') }}</p>
@@ -193,14 +170,14 @@
             {% endif %}
 
           </div>
-        </div>
+        </section>
       <!--/noindex-->
       {% endif %}
 
-      {% if theme.back2top.enable and theme.back2top.sidebar %}
+      {% if theme.sidebar.b2t %}
         <div class="back-to-top">
           <i class="fa fa-arrow-up"></i>
-          {% if theme.back2top.scrollpercent %}
+          {% if theme.sidebar.scrollpercent %}
             <span id="scrollpercent"><span>0</span>%</span>
           {% endif %}
         </div>
@@ -208,7 +185,4 @@
 
     </div>
   </aside>
-  {% if theme.sidebar.dimmer %}
-    <div id="sidebar-dimmer"></div>
-  {% endif %}
 {% endmacro %}

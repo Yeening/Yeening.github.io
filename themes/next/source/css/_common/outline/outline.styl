@@ -9,6 +9,7 @@ html, body { height: 100%; }
 
 .container {
   position: relative;
+  min-height: 100%;
 }
 
 
@@ -27,9 +28,9 @@ html, body { height: 100%; }
   }
 }
 
-
 // Main Section
 // --------------------------------------------------
+.main { padding-bottom: $footer-height + $gap-between-main-and-footer; }
 .main-inner {
   margin: 0 auto;
   width: $content-desktop;
@@ -46,11 +47,15 @@ html, body { height: 100%; }
 // Footer Section
 // --------------------------------------------------
 .footer {
-  padding: 20px 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: $footer-height;
 }
 .footer-inner {
   box-sizing: border-box;
-  margin: 0px auto;
+  margin: 20px auto;
   width: $content-desktop;
 
   +desktop-large() {

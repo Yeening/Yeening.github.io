@@ -32,6 +32,8 @@
 
 
 
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -44,21 +46,6 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
-
-<link rel="stylesheet" href="/css/main.css?v=7.1.2">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
 
 
 
@@ -66,15 +53,40 @@
 
 
 
-<script id="hexo.configurations">
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '7.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -110,13 +122,12 @@
 
 
 
-  
-  
+
   <link rel="canonical" href="http://yeening.top/archives/2019/">
 
 
 
-<script id="page.configurations">
+<script type="text/javascript" id="page.configurations">
   CONFIG.page = {
     sidebar: "",
   };
@@ -128,18 +139,6 @@
 
 
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143294501-1"></script>
-  <script>
-    var host = window.location.hostname;
-    if (host !== "localhost" || !true) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-143294501-1');
-    }
-  </script>
-
-
 
 
 
@@ -148,27 +147,29 @@
 
 
   <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
   </style>
 </noscript>
 
@@ -186,7 +187,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
+  <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
@@ -196,7 +197,6 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
     
   </div>
 
@@ -423,11 +423,11 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/08/26/Solved-Hexo-deploy-error-fatal-in-unpopulated-submodule-deploy-git/" itemprop="url">
-            
-              <span itemprop="name">Solved Hexo deploy error: fatal: in unpopulated submodule '.deploy_git'</span>
-            
-          </a>
+            <a class="post-title-link" href="/2019/08/26/Solved-Hexo-deploy-error-fatal-in-unpopulated-submodule-deploy-git/" itemprop="url">
+              
+                <span itemprop="name">Solved Hexo deploy error: fatal: in unpopulated submodule '.deploy_git'</span>
+              
+            </a>
         
       </h2>
 
@@ -458,11 +458,11 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/07/10/嘻哈笔记1/" itemprop="url">
-            
-              <span itemprop="name">开始学嘻哈——嘻哈笔记1</span>
-            
-          </a>
+            <a class="post-title-link" href="/2019/07/10/嘻哈笔记1/" itemprop="url">
+              
+                <span itemprop="name">开始学嘻哈——嘻哈笔记1</span>
+              
+            </a>
         
       </h2>
 
@@ -493,11 +493,11 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/" itemprop="url">
-            
-              <span itemprop="name">How to build a blog/personal site with github and hexo</span>
-            
-          </a>
+            <a class="post-title-link" href="/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/" itemprop="url">
+              
+                <span itemprop="name">How to build a blog/personal site with github and hexo</span>
+              
+            </a>
         
       </h2>
 
@@ -540,20 +540,21 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/imgs/2.png" alt="Yining(Yeening) Liu">
             
               <p class="site-author-name" itemprop="name">Yining(Yeening) Liu</p>
-              <div class="site-description motion-element" itemprop="description"></div>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           
@@ -573,11 +574,7 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
+                  <a href="/categories/index.html">
                     
                     
                       
@@ -594,11 +591,7 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
+                  <a href="/tags/index.html">
                     
                     
                       
@@ -633,34 +626,6 @@
           
 
           
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/Yeening" title="GitHub &rarr; https://github.com/Yeening" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:yl7sr@virginia.edu" title="E-Mail &rarr; mailto:yl7sr@virginia.edu" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-            </div>
-          
-
-          
 
           
           
@@ -671,7 +636,7 @@
           
 
         </div>
-      </div>
+      </section>
 
       
 
@@ -679,7 +644,6 @@
 
     </div>
   </aside>
-  
 
 
         
@@ -708,7 +672,7 @@
 
 
 
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.1.2</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v6.6.0</div>
 
 
 
@@ -718,23 +682,15 @@
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="post-meta-item-icon">
-      <i class="fa fa-user"></i>
-    </span>
     <span class="site-uv" title="Total Visitors">
+      <i class="fa fa-user"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
     </span>
   
 
   
-    <span class="post-meta-divider">|</span>
-  
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-eye"></i>
-    </span>
     <span class="site-pv" title="Total Views">
+      <i class="fa fa-eye"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
     </span>
   
@@ -760,7 +716,7 @@
     
 
     
-
+	
     
 
     
@@ -768,7 +724,7 @@
 
   
 
-<script>
+<script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -797,62 +753,74 @@
 
 
 
-
-
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.1.2"></script>
-
-  <script src="/js/motion.js?v=7.1.2"></script>
 
 
 
   
   
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
 
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
 
-  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
 
-
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+  
 
 
   
 
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
   
-
-
-  <script src="/js/next-boot.js?v=7.1.2"></script>
-
-
   
 
   
 
   
 
-  
-  
-  <script id="dsq-count-scr" src="https://yeening-liu.disqus.com/count.js" async></script>
 
-
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
 
 
 
   
-  <script>
+
+  
+    <script id="dsq-count-scr" src="https://yeening-liu.disqus.com/count.js" async></script>
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -938,7 +906,7 @@
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
                 
                 var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
                 var indexOfContent = [];
                 // only match articles with not empty titles
@@ -1107,9 +1075,9 @@
               })
             };
             if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
             } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
                 if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
@@ -1187,9 +1155,6 @@
   
 
   
-
-  
-
   
 
   
