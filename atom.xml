@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yeening.top/"/>
-  <updated>2019-08-26T18:57:30.068Z</updated>
+  <updated>2019-08-26T20:47:50.742Z</updated>
   <id>http://yeening.top/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Solve hexo view count error: Busuanzi counting view icon doesn&#39;t show</title>
+    <link href="http://yeening.top/2019/08/26/Solve-hexo-view-count-error-Busuanzi-counting-view-icon-doesn-t-show/"/>
+    <id>http://yeening.top/2019/08/26/Solve-hexo-view-count-error-Busuanzi-counting-view-icon-doesn-t-show/</id>
+    <published>2019-08-26T08:47:50.000Z</published>
+    <updated>2019-08-26T20:47:50.742Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Solved Hexo deploy error: fatal: in unpopulated submodule &#39;.deploy_git&#39;</title>

@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yeening.top/about/index.html</loc>
+    
+    <lastmod>2019-08-26T20:53:51.135Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yeening.top/2019/08/26/Solve-hexo-view-count-error-Busuanzi-counting-view-icon-doesn-t-show/</loc>
+    
+    <lastmod>2019-08-26T20:47:50.742Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yeening.top/2019/08/26/Solved-Hexo-deploy-error-fatal-in-unpopulated-submodule-deploy-git/</loc>
     
     <lastmod>2019-08-26T18:57:30.068Z</lastmod>
@@ -24,13 +38,6 @@
   
   <url>
     <loc>http://yeening.top/2019/07/10/%E5%98%BB%E5%93%88%E7%AC%94%E8%AE%B01/</loc>
-    
-    <lastmod>2019-08-26T03:15:28.241Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yeening.top/about/index.html</loc>
     
     <lastmod>2019-08-26T03:15:28.241Z</lastmod>
     
