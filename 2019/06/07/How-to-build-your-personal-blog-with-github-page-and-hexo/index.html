@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Why Blog?Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages.   Because:    You can know many like-minded people with you whe">
+<meta name="keywords" content="Blog,Life,Technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to build a blog&#x2F;personal site with github and hexo">
+<meta property="og:url" content="http://yeening.top/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/index.html">
+<meta property="og:site_name" content="Yeening&#39;s Blog">
+<meta property="og:description" content="Why Blog?Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages.   Because:    You can know many like-minded people with you whe">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-26T18:01:56.954Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to build a blog&#x2F;personal site with github and hexo">
+<meta name="twitter:description" content="Why Blog?Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages.   Because:    You can know many like-minded people with you whe">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Yeening's Blog" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="http://yeening.top/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>How to build a blog/personal site with github and hexo | Yeening's Blog</title>
+  
+
+
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143294501-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-143294501-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yeening's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yeening.top/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yining(Yeening) Liu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/imgs/2.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yeening's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">How to build a blog/personal site with github and hexo
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-07 12:32:05" itemprop="dateCreated datePublished" datetime="2019-06-07T12:32:05+08:00">2019-06-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-27 02:01:56" itemprop="dateModified" datetime="2019-08-27T02:01:56+08:00">2019-08-27</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/engineer/" itemprop="url" rel="index"><span itemprop="name">engineer</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog?"></a>Why Blog?</h2><p>Simply speaking, recording your valuable thinking in the form of a blog brings many benefits without any obvious disadvantages.  </p>
+<p>Because: </p>
+<blockquote>
+<ol>
+<li><p>You can know many like-minded people with you when you read and discuss each other’s blogs.</p>
+</li>
+<li><p>Writing is for better thinking.</p>
+</li>
+<li><p>Teaching is the best way of leaning. If you cannot make a clear statement, you probably don’t fully understand it.</p>
+<p>— <a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" target="_blank" rel="noopener">WeiPeng’s Blog</a></p>
+</li>
+</ol>
+</blockquote>
+<h2 id="Create-a-repository-on-github"><a href="#Create-a-repository-on-github" class="headerlink" title="Create a repository on github"></a>Create a repository on github</h2><p>Create a repository on your <a href="https://github.com/" target="_blank" rel="noopener">github</a>, caution: you must create a repository named:    </p>
+<p>​            <strong><em>YourUserName.github.io</em></strong></p>
+<blockquote>
+<p><em>If you don’t know how to create a repository, follow this: <a href="https://help.github.com/en/articles/create-a-repo" target="_blank" rel="noopener">Create a repo</a></em>.</p>
+</blockquote>
+<h2 id="Build-your-environment"><a href="#Build-your-environment" class="headerlink" title="Build your environment"></a>Build your environment</h2><p>There are only tiny differences on the steps for windows and MacOS, I’ll introduce both. Just go with me!</p>
+<h3 id="Install-git"><a href="#Install-git" class="headerlink" title="Install git"></a>Install git</h3><ul>
+<li><p>For Windows users: </p>
+<ul>
+<li>download the suitable version Git for Windows Setup with your computer from the official site: <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git - Downloading Package</a>.</li>
+<li>Install Git with the setup package,</li>
+</ul>
+</li>
+<li><p>For MacOS users, just run</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p>to check or automatically install Git if it doesn’t exist on your Mac.</p>
+</li>
+<li><p>Test the Git installation with <code>git</code> command in cmd.</p>
+</li>
+</ul>
+<h3 id="Connect-github-with-ssh"><a href="#Connect-github-with-ssh" class="headerlink" title="Connect github with ssh:"></a>Connect github with ssh:</h3><ul>
+<li><p>open cmd with as an administrator.</p>
+</li>
+<li><p>set the user.name and user.email.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name YourGithubUserName</span><br><span class="line">git config --global user.email YourGithubEmail</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>generate the ssh key file.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C YourGithubEmail</span><br></pre></td></tr></table></figure>
+
+<p>press the Enter for three times.</p>
+</li>
+<li><p>Copy the SSH key</p>
+<ul>
+<li>For windows users:<ul>
+<li>find the generated id_rsa.pub file, copy the whole content.</li>
+<li>Or use command line like Mac users.</li>
+</ul>
+</li>
+<li>For Mac users:<ul>
+<li><code>pbcopy &lt; ~/.ssh/id_rsa.pub</code> in Terminal.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Open <a href="https://github.com/settings/keys" target="_blank" rel="noopener">GitHub_Settings_keys</a>, choose New SSH key, paste the key in the Key blank, fill in the Title blank with anything, choose Add SSH key.</p>
+</li>
+<li><p>test the linage in cmd</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>If you see the welcome message, eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi XXX! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line">Connection to github.com closed.</span><br></pre></td></tr></table></figure>
+
+<p>Congratulations!</p>
+</li>
+<li><p>You have successfully set your Git, you can manage your github repositories with Git on your computer.</p>
+</li>
+</ul>
+<h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><ul>
+<li><p>For Windows:</p>
+<ul>
+<li>Download Node.js at the offical website: <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Download | Node.js</a></li>
+</ul>
+</li>
+<li><p>For Mac:</p>
+<ul>
+<li><p>Download install package at official website; or just use:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
+<p>in Terminal.</p>
+</li>
+</ul>
+</li>
+<li><p>After installation, use <code>node -v</code> in cmd to check node.js.</p>
+</li>
+<li><p>use <code>npm -v</code> in cmd to check npm (installed with node.js)</p>
+</li>
+</ul>
+<h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><p><a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">Hexo</a> is:</p>
+<blockquote>
+<p>A fast, simple &amp; powerful blog framework, powered by <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a>. </p>
+</blockquote>
+<p>We can easily  create and manage our blog with hexo.</p>
+<ul>
+<li><p>Make a folder (eg. MyBlog), cd to it in cmd</p>
+</li>
+<li><p>Install hexo with npm</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Initialize-the-blog"><a href="#Initialize-the-blog" class="headerlink" title="Initialize the blog"></a>Initialize the blog</h2><ul>
+<li><p>Set up your blog</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Generate static files</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Start the server (run the blog with local server, usually for test)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Visit localhost:4000 (the ip address shown in the return message in cmd), we can see the initial form of a hexo bolg.</p>
+</li>
+</ul>
+<h2 id="Deploy-the-blog"><a href="#Deploy-the-blog" class="headerlink" title="Deploy the blog"></a>Deploy the blog</h2><p>We are now running the blog at local server, in the next step, we are going to deploy it to github, so that your blog can be visited anywhere with Internet access.</p>
+<p>Firstly, we need to know about the site configuration file: <code>_config.yml</code> (under the root folder of blog),  we can config the characteristics of our blog by modifying this file.</p>
+<ul>
+<li><p>Open site configuration file, find ‘deploy’, modify the deploy block to:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: https://github.com/YourUserName/YourUserName.github.io.git</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Save site configuration file.</p>
+</li>
+<li><p>Install Git-deployer plugin:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Clean, generate and deploy the blog</p>
+<p>Remind the following commands, you need to use them (or replace <code>hexo d</code> with <code>hexo s</code> for local test) every time you make changes to your blog:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em><code>hexo d</code> is the deploy command in hexo</em></p>
+</blockquote>
+</li>
+<li><p>If everything goes correctly, you can now access your blog on Internet at: <strong><em>YourUserName.github.io</em></strong></p>
+</li>
+</ul>
+<h2 id="Choose-a-theme"><a href="#Choose-a-theme" class="headerlink" title="Choose a theme"></a>Choose a theme</h2><p>There are hundreds of themes for hexo, you can access them at: <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a>.</p>
+<p><strong>Next</strong> is a popular blog theme because its simply yet elegant UI, I will take this theme as example.</p>
+<ul>
+<li><p>Open the Command Prompt at the root folder of blog (the folder which includes /source and /theme, etc.)</p>
+</li>
+<li><p>Clone the theme to the folder: /themes/<strong>themename</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Open the site configuration file: <code>_config.yml</code>,change the value of theme to next (the name of theme)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Clean, generate and deploy the blog</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<blockquote>
+<p><em>For more settings with the theme next, refer to its repository: <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a> , or its documentation: <a href="https://theme-next.org/docs/" target="_blank" rel="noopener">https://theme-next.org/docs/</a>, if you are a beginner, it’s good to start with next because of its detailed users’ guide</em></p>
+</blockquote>
+<h2 id="Write-a-post"><a href="#Write-a-post" class="headerlink" title="Write a post"></a>Write a post</h2><ul>
+<li><p>You can create a new post with this command:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;My post title&quot;</span><br></pre></td></tr></table></figure>
+
+<p>or:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;My post title&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Hexo will generate a markdown file named: <em>My post title.md</em>  under path: /source/_posts, you can easily write and edit your post by editing this file.</p>
+<blockquote>
+<p><em>If you don’t know what is or how to write markdown, you can learn from here: <a href="https://www.markdownguide.org/getting-started" target="_blank" rel="noopener">https://www.markdownguide.org/getting-started</a></em></p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>You can create a new page with this command:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;About&quot;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Bind-a-domain-name-Optional"><a href="#Bind-a-domain-name-Optional" class="headerlink" title="Bind a domain name (Optional)"></a>Bind a domain name (Optional)</h2><p>It is okey to leave your blog adress as <em>YourUserName.github.io</em>, and it’s cool to own your personalized domain name, if you want to bind your blog with your own domain name, follow the following steps:</p>
+<h3 id="Get-a-domain-name"><a href="#Get-a-domain-name" class="headerlink" title="Get a domain name"></a>Get a domain name</h3><p>Personally, I buy my domain name at <a href="alibabacloud.com">ALi Cloud</a>, but it’s up to you.</p>
+<h3 id="Set-up-the-domain-name"><a href="#Set-up-the-domain-name" class="headerlink" title="Set up the domain name"></a>Set up the domain name</h3><p>The steps of setting a domain name varies with your domain name and its provider, so I will skip the detail, you can follow the official guide from github: <a href="https://help.github.com/en/articles/quick-start-setting-up-a-custom-domain" target="_blank" rel="noopener">https://help.github.com/en/articles/quick-start-setting-up-a-custom-domain</a></p>
+<h3 id="Create-a-CNAME-file"><a href="#Create-a-CNAME-file" class="headerlink" title="Create a CNAME file"></a>Create a CNAME file</h3><p>Create a file named <code>CNMAE</code> under folder /source, type in your domain name, you can type in your domain name without www, so that your site can be visited via a domain name either include www or not.</p>
+<h2 id="Sync-hexo-blogs-among-different-computers-From-Xiaoyu-Liu"><a href="#Sync-hexo-blogs-among-different-computers-From-Xiaoyu-Liu" class="headerlink" title="Sync hexo blogs among different computers (From Xiaoyu Liu)"></a>Sync hexo blogs among different computers (From Xiaoyu Liu)</h2><p>I found a good way to sync your blog among different computers on <a href="https://xiaoyuliu.github.io/2018/03/28/how-to-sync-hexo-blog/" target="_blank" rel="noopener">Here</a> :</p>
+<blockquote>
+<p>Thanks to Xiaoyu Liu!</p>
+</blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Blog/" rel="tag"># Blog</a>
+          
+            <a href="/tags/Life/" rel="tag"># Life</a>
+          
+            <a href="/tags/Technology/" rel="tag"># Technology</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/10/嘻哈笔记1/" rel="prev" title="开始学嘻哈——嘻哈笔记1">
+                开始学嘻哈——嘻哈笔记1 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/imgs/2.png" alt="Yining(Yeening) Liu">
+            
+              <p class="site-author-name" itemprop="name">Yining(Yeening) Liu</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Yeening" title="GitHub &rarr; https://github.com/Yeening" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:yl7sr@virginia.edu" title="E-Mail &rarr; mailto:yl7sr@virginia.edu" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-Blog"><span class="nav-number">1.</span> <span class="nav-text">Why Blog?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-a-repository-on-github"><span class="nav-number">2.</span> <span class="nav-text">Create a repository on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-your-environment"><span class="nav-number">3.</span> <span class="nav-text">Build your environment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-git"><span class="nav-number">3.1.</span> <span class="nav-text">Install git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Connect-github-with-ssh"><span class="nav-number">3.2.</span> <span class="nav-text">Connect github with ssh:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Node-js"><span class="nav-number">3.3.</span> <span class="nav-text">Install Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Hexo"><span class="nav-number">3.4.</span> <span class="nav-text">Install Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialize-the-blog"><span class="nav-number">4.</span> <span class="nav-text">Initialize the blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deploy-the-blog"><span class="nav-number">5.</span> <span class="nav-text">Deploy the blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Choose-a-theme"><span class="nav-number">6.</span> <span class="nav-text">Choose a theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Write-a-post"><span class="nav-number">7.</span> <span class="nav-text">Write a post</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bind-a-domain-name-Optional"><span class="nav-number">8.</span> <span class="nav-text">Bind a domain name (Optional)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Get-a-domain-name"><span class="nav-number">8.1.</span> <span class="nav-text">Get a domain name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-up-the-domain-name"><span class="nav-number">8.2.</span> <span class="nav-text">Set up the domain name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-CNAME-file"><span class="nav-number">8.3.</span> <span class="nav-text">Create a CNAME file</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sync-hexo-blogs-among-different-computers-From-Xiaoyu-Liu"><span class="nav-number">9.</span> <span class="nav-text">Sync hexo blogs among different computers (From Xiaoyu Liu)</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yining(Yeening) Liu</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.1.2</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="Total Visitors">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="Total Views">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://yeening-liu.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://yeening.top/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/";
+    this.page.identifier = "2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/";
+    this.page.title = 'How to build a blog/personal site with github and hexo';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yeening-liu.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
