@@ -379,7 +379,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yeening.top/2019/07/11/嘻哈笔记1/">
+    <link itemprop="mainEntityOfPage" href="http://yeening.top/2019/07/10/嘻哈笔记1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yining(Yeening) Liu">
@@ -399,7 +399,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/11/嘻哈笔记1/" class="post-title-link" itemprop="url">开始学嘻哈——嘻哈笔记1</a>
+                <a href="/2019/07/10/嘻哈笔记1/" class="post-title-link" itemprop="url">开始学嘻哈——嘻哈笔记1</a>
               
             
           </h1>
@@ -424,12 +424,24 @@
                 
               
 
-              <time title="Created: 2019-07-11 10:52:04 / Modified: 10:54:08" itemprop="dateCreated datePublished" datetime="2019-07-11T10:52:04+08:00">2019-07-11</time>
+              <time title="Created: 2019-07-11 10:52:04" itemprop="dateCreated datePublished" datetime="2019-07-11T10:52:04+08:00">2019-07-11</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-26 11:15:28" itemprop="dateModified" datetime="2019-08-26T11:15:28+08:00">2019-08-26</time>
               
             
           </span>
@@ -465,8 +477,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/07/11/嘻哈笔记1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/11/嘻哈笔记1/" itemprop="commentCount"></span>
+                <a href="/2019/07/10/嘻哈笔记1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/10/嘻哈笔记1/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -657,7 +669,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-07-03 22:50:08" itemprop="dateModified" datetime="2019-07-03T22:50:08+08:00">2019-07-03</time>
+                <time title="Modified: 2019-08-27 02:01:56" itemprop="dateModified" datetime="2019-08-27T02:01:56+08:00">2019-08-27</time>
               
             
           </span>
@@ -742,27 +754,45 @@
 <blockquote>
 <p><em>If you don’t know how to create a repository, follow this: <a href="https://help.github.com/en/articles/create-a-repo" target="_blank" rel="noopener">Create a repo</a></em>.</p>
 </blockquote>
-<h2 id="Build-your-environment"><a href="#Build-your-environment" class="headerlink" title="Build your environment"></a>Build your environment</h2><p>I will introduce the steps on windows, if you are using a Mac, you can see this: <a href="https://commitlogs.com/2016/09/03/how-to-build-blog-with-hexo/" target="_blank" rel="noopener">How To Build A Blog With Hexo</a>.</p>
+<h2 id="Build-your-environment"><a href="#Build-your-environment" class="headerlink" title="Build your environment"></a>Build your environment</h2><p>There are only tiny differences on the steps for windows and MacOS, I’ll introduce both. Just go with me!</p>
 <h3 id="Install-git"><a href="#Install-git" class="headerlink" title="Install git"></a>Install git</h3><ul>
-<li><p>Download the suitable version Git for Windows Setup with your computer from the official site: <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git - Downloading Package</a>.</p>
+<li><p>For Windows users: </p>
+<ul>
+<li>download the suitable version Git for Windows Setup with your computer from the official site: <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git - Downloading Package</a>.</li>
+<li>Install Git with the setup package,</li>
+</ul>
 </li>
-<li><p>Install Git.</p>
+<li><p>For MacOS users, just run</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p>to check or automatically install Git if it doesn’t exist on your Mac.</p>
 </li>
 <li><p>Test the Git installation with <code>git</code> command in cmd.</p>
 </li>
-<li><p>Link your Git with your github account:</p>
-<ul>
-<li><p>open cmd with as an administrator</p>
+</ul>
+<h3 id="Connect-github-with-ssh"><a href="#Connect-github-with-ssh" class="headerlink" title="Connect github with ssh:"></a>Connect github with ssh:</h3><ul>
+<li><p>open cmd with as an administrator.</p>
 </li>
-<li><p>set the user.name and user.email</p>
+<li><p>set the user.name and user.email.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name YourGithubUserName</span><br><span class="line">git config --global user.email YourGithubEmail</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>generate the ssh key file</p>
+<li><p>generate the ssh key file.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C YourGithubEmail</span><br></pre></td></tr></table></figure>
 
-<p>press the Enter for three times</p>
+<p>press the Enter for three times.</p>
 </li>
-<li><p>find the generated id_rsa.pub file, copy the whole content</p>
+<li><p>Copy the SSH key</p>
+<ul>
+<li>For windows users:<ul>
+<li>find the generated id_rsa.pub file, copy the whole content.</li>
+<li>Or use command line like Mac users.</li>
+</ul>
+</li>
+<li>For Mac users:<ul>
+<li><code>pbcopy &lt; ~/.ssh/id_rsa.pub</code> in Terminal.</li>
+</ul>
+</li>
+</ul>
 </li>
 <li><p>Open <a href="https://github.com/settings/keys" target="_blank" rel="noopener">GitHub_Settings_keys</a>, choose New SSH key, paste the key in the Key blank, fill in the Title blank with anything, choose Add SSH key.</p>
 </li>
@@ -774,15 +804,28 @@
 
 <p>Congratulations!</p>
 </li>
-</ul>
-</li>
 <li><p>You have successfully set your Git, you can manage your github repositories with Git on your computer.</p>
 </li>
 </ul>
 <h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><ul>
+<li><p>For Windows:</p>
+<ul>
 <li>Download Node.js at the offical website: <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Download | Node.js</a></li>
-<li>After installation, use <code>node -v</code> in cmd to check node.js.</li>
-<li>use <code>npm -v</code> in cmd to check npm (installed with node.js)</li>
+</ul>
+</li>
+<li><p>For Mac:</p>
+<ul>
+<li><p>Download install package at official website; or just use:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
+<p>in Terminal.</p>
+</li>
+</ul>
+</li>
+<li><p>After installation, use <code>node -v</code> in cmd to check node.js.</p>
+</li>
+<li><p>use <code>npm -v</code> in cmd to check npm (installed with node.js)</p>
+</li>
 </ul>
 <h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><p><a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">Hexo</a> is:</p>
 <blockquote>
@@ -793,7 +836,7 @@
 <li><p>Make a folder (eg. MyBlog), cd to it in cmd</p>
 </li>
 <li><p>Install hexo with npm</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>

@@ -32,60 +32,88 @@ Create a repository on your [github](<https://github.com/>), caution: you must c
 
 ## Build your environment
 
-I will introduce the steps on windows, if you are using a Mac, you can see this: [How To Build A Blog With Hexo](<https://commitlogs.com/2016/09/03/how-to-build-blog-with-hexo/>).
+There are only tiny differences on the steps for windows and MacOS, I'll introduce both. Just go with me!
 
 ### Install git
 
-* Download the suitable version Git for Windows Setup with your computer from the official site: [Git - Downloading Package](<https://git-scm.com/download/win>).
+* For Windows users: 
 
-* Install Git.
+  * download the suitable version Git for Windows Setup with your computer from the official site: [Git - Downloading Package](<https://git-scm.com/download/win>).
+  * Install Git with the setup package,
+
+* For MacOS users, just run
+
+  ```
+  git --version
+  ```
+
+  to check or automatically install Git if it doesn't exist on your Mac.
 
 * Test the Git installation with `git` command in cmd.
 
-* Link your Git with your github account:
+### Connect github with ssh:
 
-  * open cmd with as an administrator
+* open cmd with as an administrator.
 
-  * set the user.name and user.email
+* set the user.name and user.email.
 
-    ```
-    git config --global user.name YourGithubUserName
-    git config --global user.email YourGithubEmail
-    ```
+  ```
+  git config --global user.name YourGithubUserName
+  git config --global user.email YourGithubEmail
+  ```
 
-  * generate the ssh key file
+* generate the ssh key file.
 
-    ```
-    ssh-keygen -t rsa -C YourGithubEmail
-    ```
+  ```
+  ssh-keygen -t rsa -C YourGithubEmail
+  ```
 
-    press the Enter for three times
+  press the Enter for three times.
 
-  * find the generated id_rsa.pub file, copy the whole content
+* Copy the SSH key
 
-  * Open [GitHub_Settings_keys](https://github.com/settings/keys), choose New SSH key, paste the key in the Key blank, fill in the Title blank with anything, choose Add SSH key.
+  * For windows users:
+    * find the generated id_rsa.pub file, copy the whole content.
+    * Or use command line like Mac users.
+  * For Mac users:
+    * `pbcopy < ~/.ssh/id_rsa.pub` in Terminal.
 
-  * test the linage in cmd
+* Open [GitHub_Settings_keys](https://github.com/settings/keys), choose New SSH key, paste the key in the Key blank, fill in the Title blank with anything, choose Add SSH key.
 
-    ```
-    ssh git@github.com
-    ```
+* test the linage in cmd
 
-    If you see the welcome message, eg:
+  ```
+  ssh git@github.com
+  ```
 
-    ```
-    Hi XXX! You've successfully authenticated, but GitHub does not provide shell access.
-    Connection to github.com closed.
-    ```
+  If you see the welcome message, eg:
 
-    Congratulations!
+  ```
+  Hi XXX! You've successfully authenticated, but GitHub does not provide shell access.
+  Connection to github.com closed.
+  ```
 
+  Congratulations!
+  
 * You have successfully set your Git, you can manage your github repositories with Git on your computer.
 
 ### Install Node.js
 
-* Download Node.js at the offical website: [Download | Node.js](<https://nodejs.org/en/download/>)
+* For Windows:
+  * Download Node.js at the offical website: [Download | Node.js](<https://nodejs.org/en/download/>)
+
+* For Mac:
+
+  * Download install package at official website; or just use:
+
+    ```
+    brew install node
+    ```
+
+    in Terminal.
+
 * After installation, use `node -v` in cmd to check node.js.
+
 * use `npm -v` in cmd to check npm (installed with node.js)
 
 ### Install Hexo
@@ -101,7 +129,7 @@ We can easily  create and manage our blog with hexo.
 * Install hexo with npm
 
   ```
-  npm install hexo-cli -g
+  sudo npm install hexo-cli -g
   ```
 
 ## Initialize the blog
