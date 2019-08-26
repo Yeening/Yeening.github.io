@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yeening.top/"/>
-  <updated>2019-08-26T03:15:28.241Z</updated>
+  <updated>2019-08-26T18:57:30.068Z</updated>
   <id>http://yeening.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Solved Hexo deploy error: fatal: in unpopulated submodule &#39;.deploy_git&#39;</title>
+    <link href="http://yeening.top/2019/08/26/Solved-Hexo-deploy-error-fatal-in-unpopulated-submodule-deploy-git/"/>
+    <id>http://yeening.top/2019/08/26/Solved-Hexo-deploy-error-fatal-in-unpopulated-submodule-deploy-git/</id>
+    <published>2019-08-26T06:42:41.000Z</published>
+    <updated>2019-08-26T18:57:30.068Z</updated>
+    
+    <content type="html"><![CDATA[<p>I encountered an error that says: “fatal: in unpopulated submodule ‘.deploy_git”, when I try to deploy my hexo blog with my new computer.</p><p>Solved it with this steps(under the blog folder: Yeening.github,io):</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rm -rf .deploy_git</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>The above commands delete the .deploy_git file and regenerate it with <code>hexo g</code>, then deploy it.</p><p>This provides us a strategy to solve similar errors: </p><p><em>Delete and regenerate file that cause error.</em></p><p><strong>However,</strong> you need to make sure that the file is regeneratable and you have made a backup for the file you want to delete (syncing the bolg folder with github is a good way) !</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I encountered an error that says: “fatal: in unpopulated submodule ‘.deploy_git”, when I try to deploy my hexo blog with my new computer.
+      
+    
+    </summary>
+    
+      <category term="engineer" scheme="http://yeening.top/categories/engineer/"/>
+    
+    
+      <category term="Blog" scheme="http://yeening.top/tags/Blog/"/>
+    
+      <category term="Technology" scheme="http://yeening.top/tags/Technology/"/>
+    
+      <category term="Hexo" scheme="http://yeening.top/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>开始学嘻哈——嘻哈笔记1</title>
@@ -68,9 +97,9 @@
     
       <category term="Blog" scheme="http://yeening.top/tags/Blog/"/>
     
-      <category term="Life" scheme="http://yeening.top/tags/Life/"/>
-    
       <category term="Technology" scheme="http://yeening.top/tags/Technology/"/>
+    
+      <category term="Life" scheme="http://yeening.top/tags/Life/"/>
     
   </entry>
   

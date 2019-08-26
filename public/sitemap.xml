@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yeening.top/2019/08/26/Solved-Hexo-deploy-error-fatal-in-unpopulated-submodule-deploy-git/</loc>
+    
+    <lastmod>2019-08-26T18:57:30.068Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yeening.top/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/</loc>
     
     <lastmod>2019-08-26T18:01:56.954Z</lastmod>
@@ -23,14 +30,14 @@
   </url>
   
   <url>
-    <loc>http://yeening.top/categories/index.html</loc>
+    <loc>http://yeening.top/about/index.html</loc>
     
     <lastmod>2019-08-26T03:15:28.241Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yeening.top/about/index.html</loc>
+    <loc>http://yeening.top/categories/index.html</loc>
     
     <lastmod>2019-08-26T03:15:28.241Z</lastmod>
     
