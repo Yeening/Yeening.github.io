@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yeening.top/about/index.html</loc>
+    <loc>http://yeening.top/2019/09/14/Useful-functions-in-python-machine-learning-with-numpy/</loc>
     
-    <lastmod>2019-08-26T20:53:51.135Z</lastmod>
+    <lastmod>2019-09-14T19:40:59.496Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yeening.top/2019/08/26/Solve-hexo-view-count-error-Busuanzi-counting-view-icon-doesn-t-show/</loc>
     
-    <lastmod>2019-08-26T20:47:50.742Z</lastmod>
+    <lastmod>2019-08-27T01:19:11.585Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yeening.top/2019/08/26/Solved-Hexo-deploy-error-fatal-in-unpopulated-submodule-deploy-git/</loc>
     
-    <lastmod>2019-08-26T18:57:30.068Z</lastmod>
+    <lastmod>2019-08-26T20:57:48.562Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yeening.top/about/index.html</loc>
+    
+    <lastmod>2019-08-26T20:53:51.135Z</lastmod>
     
   </url>
   
