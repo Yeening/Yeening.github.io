@@ -7,7 +7,9 @@ date: 2019-06-09 23:18:05
 
 **Yining (Yeening) Liu** is a student of computer science, a software developer and a lover of building things from 0 to 1.   
 
-Yining will earn his Bachelor's degrees in Software Engineering from Tongji University (2015.09 - 2019.06). And he will attend the CS. Master program at University of Virginia (2019.09 - ).
+Yining earned his Bachelor's degrees in Software Engineering from Tongji University (2015.09 - 2019.06). And he is taking the CS. Master program at University of Virginia (2019.09 - 2020.12(Expected) ).
+
+Looking forward to sharing technical topics with you!
 
 ## Program Languages
 
@@ -21,7 +23,7 @@ Yining will earn his Bachelor's degrees in Software Engineering from Tongji Univ
 
 twitter: [@13Yeening](<https://twitter.com/13Yeening>)
 
-linkedin: [Yining Liu](www.linkedin.com/in/yining-liu-a5b789165)
+linkedin: [Yining Liu](https://www.linkedin.com/in/yining-liu-decode003/)
 
 github: [Yeening](<https://github.com/Yeening>)
 
