@@ -79,6 +79,40 @@ array([[1, 2],
        [5, 6]])
 ```
 
+### Random Shuffle of NumPy arrays
+
+```python
+random.shuffle
+arr = np.arange(10)
+np.random.shuffle(arr)
+arr # [1 7 5 2 9 4 3 6 0 8]
+```
+
+For multi-dimensional arrays, *numpy.random.shuffle* will only shuffle the first dimension.
+
+```python
+arr = np.arange(9).reshape((3, 3))
+np.random.shuffle(arr)
+arr
+# array([[3, 4, 5],
+#        [6, 7, 8],
+#        [0, 1, 2]])
+```
+
+### Concatenate NmuPy Arrays
+
+```python
+a = np.array([[1, 2], [3, 4]])
+b = np.array([[5, 6]])
+np.concatenate((a, b), axis=0)
+# array([[1, 2],
+#        [3, 4],
+#        [5, 6]])
+np.concatenate((a, b.T), axis=1)
+# array([[1, 2, 5],
+#        [3, 4, 6]])
+```
+
 
 
 ## Numpy Linear Algebra
