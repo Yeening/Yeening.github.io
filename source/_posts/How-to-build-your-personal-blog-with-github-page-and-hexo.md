@@ -100,8 +100,9 @@ There are only tiny differences on the steps for windows and MacOS, I'll introdu
 ### Install Node.js
 
 * For Windows:
-  * Download Node.js at the offical website: [Download | Node.js](<https://nodejs.org/en/download/>)
-
+  
+* Download Node.js at the offical website: [Download | Node.js](<https://nodejs.org/en/download/>)
+  
 * For Mac:
 
   * Download install package at official website; or just use:
@@ -240,8 +241,14 @@ There are hundreds of themes for hexo, you can access them at: https://hexo.io/t
 
   > *If you don't know what is or how to write markdown, you can learn from here: https://www.markdownguide.org/getting-started*
 
-  
+* Regenerate and redeploy
 
+  ```
+  hexo clean
+  hexo g
+  hexo d
+  ```
+  
 * You can create a new page with this command:
 
   ```
