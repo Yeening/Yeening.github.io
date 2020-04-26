@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yeening.top/"/>
-  <updated>2020-04-26T02:09:29.641Z</updated>
+  <updated>2020-04-26T05:50:45.155Z</updated>
   <id>http://yeening.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac OS error: invalid active developer path, missing xcrun</title>
+    <link href="http://yeening.top/2020/04/26/Mac-OS-error-invalid-active-developer-path-missing-xcrun/"/>
+    <id>http://yeening.top/2020/04/26/Mac-OS-error-invalid-active-developer-path-missing-xcrun/</id>
+    <published>2020-04-26T05:43:56.000Z</published>
+    <updated>2020-04-26T05:50:45.155Z</updated>
+    
+    <content type="html"><![CDATA[<p>I met this error when I was trying to deploy github page. Then after trying, I found that after my Mac OS update, all git operations will return the same error:</p><p><code>error: invalid active developer path, missing xcrun</code></p><p>After searching online, I found a straightforward solution: install/reinstall the Xcode toolkit, using the command following:</p><p><code>sudo xcode-select --install</code></p><p>If that fails, you can go to <a href="https://developer.apple.com/download/more/" target="_blank" rel="noopener">Downloads for Apple Developers</a> to download Xcode manually.</p><p><em>Thanks to <a href="https://ma.ttias.be/" target="_blank" rel="noopener">Mattias Genia</a>!</em></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I met this error when I was trying to deploy github page. Then after trying, I found that after my Mac OS update, all git operations will
+      
+    
+    </summary>
+    
+      <category term="engineer" scheme="http://yeening.top/categories/engineer/"/>
+    
+    
+      <category term="Error Solving" scheme="http://yeening.top/tags/Error-Solving/"/>
+    
+  </entry>
   
   <entry>
     <title>How to share clipboard and files bewteen virtual mechaine and local - VirtualBox</title>
@@ -116,11 +141,11 @@
       <category term="engineer" scheme="http://yeening.top/categories/engineer/"/>
     
     
+      <category term="Error Solving" scheme="http://yeening.top/tags/Error-Solving/"/>
+    
       <category term="Blog" scheme="http://yeening.top/tags/Blog/"/>
     
       <category term="Technology" scheme="http://yeening.top/tags/Technology/"/>
-    
-      <category term="Error Solving" scheme="http://yeening.top/tags/Error-Solving/"/>
     
       <category term="Hexo" scheme="http://yeening.top/tags/Hexo/"/>
     
