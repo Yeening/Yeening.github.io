@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yeening.top/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/</loc>
+    
+    <lastmod>2020-04-26T02:11:25.330Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yeening.top/2020/04/26/How-to-share-clipboard-and-files-bewteen-virtual-mechaine-and-local-VirtualBox/</loc>
+    
+    <lastmod>2020-04-26T02:09:29.641Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yeening.top/2019/09/14/Useful-functions-in-python-machine-learning-with-numpy/</loc>
     
     <lastmod>2019-09-15T02:30:33.609Z</lastmod>
@@ -30,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://yeening.top/2019/06/07/How-to-build-your-personal-blog-with-github-page-and-hexo/</loc>
-    
-    <lastmod>2019-08-26T18:01:56.954Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yeening.top/tags/index.html</loc>
     
     <lastmod>2019-08-26T03:15:28.244Z</lastmod>
@@ -44,7 +51,7 @@
   </url>
   
   <url>
-    <loc>http://yeening.top/2019/07/10/%E5%98%BB%E5%93%88%E7%AC%94%E8%AE%B01/</loc>
+    <loc>http://yeening.top/2019/07/11/%E5%98%BB%E5%93%88%E7%AC%94%E8%AE%B01/</loc>
     
     <lastmod>2019-08-26T03:15:28.241Z</lastmod>
     
