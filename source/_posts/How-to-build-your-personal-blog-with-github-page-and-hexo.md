@@ -105,13 +105,21 @@ There are only tiny differences on the steps for windows and MacOS, I'll introdu
   
 * For Mac:
 
-  * Download install package at official website; or just use:
+  * Download install package at official website: [Download | Node.js](<https://nodejs.org/en/download/>); or just use:
 
     ```
-    brew install node
+    brew install node@10
     ```
 
     in Terminal.
+    
+  * If you don't have home-brew installed in your Mac, you could use:
+
+    ```
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    ```
+
+    in your Terminal to install it (if you already have, ignore this).
 
 * After installation, use `node -v` in cmd to check node.js.
 
